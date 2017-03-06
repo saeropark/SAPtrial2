@@ -8,6 +8,7 @@ export default class ShuttleBusInfo extends Component {
         console.log(bus);
         //var features = (typeof buses.features !== 'undefined') ? buses.features : 'no features';
         return (
+            //fetch json data and display
             <View style={styles.container}>
                 <Text style = {styles.bigRect}>Map View here</Text>     
                 <Text style={styles.features}>{bus.features}</Text>

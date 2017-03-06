@@ -6,6 +6,7 @@ import ShuttleBusInfo from './ShuttleBusInfo';
 export default class HomeView extends Component {
     render() {
         return (
+          //different buttons 
             <View style = {styles.container}>
                 <Text>WELCOME!</Text>
                 <TouchableHighlight onPress={this.goAnnouncement.bind(this)}>
@@ -29,6 +30,8 @@ export default class HomeView extends Component {
     goAnnouncement() {
         Alert.alert('WORK IN PROGRESS');
     }
+
+    //to shuttle bus page
     goShuttleBus() {
     console.log("go to Shuttle Bus");
     this.props.navigator.push({ screen: 'ShuttleBusList' });

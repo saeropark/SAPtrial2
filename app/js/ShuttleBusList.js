@@ -25,7 +25,7 @@ export default class ShuttleBusList extends Component {
         this.fetchData();
     }
 
-
+    
    fetchData() {
         fetch(REQUEST_URL)
         .then((response) => response.json())
@@ -56,9 +56,9 @@ export default class ShuttleBusList extends Component {
         );
     }
 
+    //function to show loading
     renderLoadingView() {
         return (
-            
             <View style = {styles.loading}>
                 <ActivityIndicator size= 'large' />
                 <Text> Loading buses... </Text>
@@ -66,6 +66,7 @@ export default class ShuttleBusList extends Component {
         );
     }
 
+    //to display json data
     renderBus(bus) {
         return(
             //wrapper to respond listview to touch
@@ -84,6 +85,7 @@ export default class ShuttleBusList extends Component {
         );
     }
 
+    //to trigger detail page
     showBusDetail(bus) {
         this.props.navigator.push({
             screen: 'ShuttleBusInfo',
@@ -93,6 +95,7 @@ export default class ShuttleBusList extends Component {
         });
     }
 
+    //back to home
     goHome() {
       console.log("go Home");
       this.props.navigator.pop({ screen: 'HomeView'});
