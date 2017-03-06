@@ -1,0 +1,3 @@
+rootProject.name = 'SAPtrial2'
+
+include ':app'
